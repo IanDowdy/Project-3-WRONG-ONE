@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Connection from './components/Connection';
 import './App.css';
 
 class App extends Component {
@@ -6,6 +7,7 @@ class App extends Component {
     return (
       <div className="App">
        <h1>Nicole, Pat, Jennifer, Alex, and Ian.... WHAT UP FOOOS!</h1>
+        <Connection />
       </div>
     );
   }
