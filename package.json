@@ -1,25 +1,31 @@
 {
-  "name": "project3",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
-    "react-scripts": "2.1.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
-}
+    "name": "project3",
+    "version": "1.0.0",
+    "description": "Setup for Project 3",
+    "main": "server.js",
+    "scripts": {
+      "client-install": "cd client && npm install",
+      "start": "node server.js",
+      "server": "nodemon server.js",
+      "client": "npm start --prefix client",
+      "dev": "concurrently \"npm run server\" \"npm run client\"",
+      "heroku-postbuild": "cd client && npm run build"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/IanDowdy/Project-3.git"
+    },
+    "author": "Ian",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/IanDowdy/Project-3/issues"
+    },
+    "homepage": "https://github.com/IanDowdy/Project-3#readme",
+    "dependencies": {
+      "concurrently": "^4.1.0",
+      "express": "^4.16.4"
+    },
+    "devDependencies": {
+      "nodemon": "^1.18.9"
+    }
+  }
