@@ -1,4 +1,4 @@
-# App a Day!
+# WRONG ONE!!!! USE THE ORGANIZATION!!!
 
 App a Day! is a new way for beginning coders to enter a calm and friendly atmosphere to start learning the fundamentals of coding.
 By taking small functional pieces of code and breaking them down line by line after being replicated we hope to give users an
