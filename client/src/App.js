@@ -1,20 +1,30 @@
 import React, { Component } from 'react';
-import Connection from './components/Connection/Connection';
-import CodeEditor from './components/CodeEditor/CodeEditor';
-import StepByStep from './components/StepByStep/StepByStep';
-import Guide from './components/Guide/Guide';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
+
+import Home from './components/Home/Home';
+import About from './components/About/About';
+import Error from './components/Error/Error';
+import Navigation from './components/Navigation/Navigation';
 import './App.css';
+import CodeEditor from './components/CodeEditor/CodeEditor';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-       <h1>App-A-Day! The choice way to ease yourself in to the hectic world of coding!</h1>
-        <Connection />
-        <CodeEditor />
-        <StepByStep />
-        <Guide />
-      </div>
+      <div>
+      <BrowserRouter>
+   <div>
+     <Navigation />  
+     <Switch>>
+       <Route path="/" component={Home} exact />
+       <Route path="/about" component={About} />
+       <Route path="/freecode" component={CodeEditor} />
+       <Route path="" component={Error} />
+     </Switch>
+     </div>
+     </BrowserRouter>
+     </div>
     );
   }
 }
