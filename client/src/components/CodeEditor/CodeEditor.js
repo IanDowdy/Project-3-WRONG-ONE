@@ -7,7 +7,7 @@ class CodeEditor extends Component {
     return (
       <div className="editor">
           <Jumbotron>
-       <iframe class="editor-container" src="https://stackblitz.com/edit/js-quhffp?embed=1&file=index.js" view="Editor" title="code editor"></iframe>
+       <iframe className="editor-container" src="https://stackblitz.com/edit/js-quhffp?embed=1&file=index.js" view="Editor" title="code editor"></iframe>
          </Jumbotron>
       </div>
     );
