@@ -1,16 +1,57 @@
 h1 {
     margin-top: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     /* font-family: 'Bungee Outline', cursive; */
     /* font-family: 'Geostar Fill', cursive; */
     font-family: 'Faster One', cursive;
+    /* letter-spacing: 35px; */
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
 
-    color: rgb(3, 27, 65);
+    
+}
+#title {
+    /* padding-bottom: 50px; */
+    font-family: 'Faster One', cursive;
+    letter-spacing: 18px;
+  animation: moveInRight 1s ease-out;
+    
 }
 
 * {
     color: gray;
 }
- 
 
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }   
+  
+    80% {
+        transform: translateX(1rem);
+    }
+  
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+  }
+ 
+  @keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }   
+  
+    80% {
+        transform: translateX(-1rem);
+    }
+  
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+  }
 
