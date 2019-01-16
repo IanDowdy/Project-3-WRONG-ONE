@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8" />
-    <title>NYT Web Scraper</title>
+    <title>App A Day</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -98,25 +98,27 @@
             >Home<span class="sr-only">(current)</span></a
           >
           <a class="nav-item nav-link" href="saved.html">Saved Tutorials</a>
-          <button class="btn btn-danger scrape">Find New Tutorials</button>
+          <a class="nav-item nav-link" href="tutorials.html">Find New Tutorials</a>
         </div>
       </div>
     </nav>
     <div id="wrapper">
-      <div class="jumbotron jumbotron-fluid" id="jumbotron">
-        <div class="container headDisplay">
-          <div class="row" id="jumbotron-1">
-            <div class="col-sm" id="main">
-              <h1 class="display-4">App-A-Day</h1>
-              <div class="col-sm"></div>
+        <div class="card">
+            <div class="card-header">
+                Saved Tutorials
             </div>
-          </div>
+            <div class="card-body">
+                <div id="saved"></div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="card">
-        <div class="card-header">View and Save Tutorials</div>
-      </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <script src="app.js"></script>

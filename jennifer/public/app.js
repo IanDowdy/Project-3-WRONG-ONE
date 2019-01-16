@@ -3,8 +3,9 @@ DATA TO LOAD TO PAGE
 ==================*/
 
 // Create a function to get tutorials on page load and when scraping
-function getTutorials() {
-  $.getJSON("/tutorials", function (data) {
+//function getTutorials() {
+  console.log('getting tutorials...')
+  $.getJSON("/tutorial", function (data) {
     console.log(data)
     for (var i = 0; i < data.length; i++) {
       $("#tutorials").append(`
@@ -15,7 +16,47 @@ function getTutorials() {
     `);
     }
   });
+
+
+//function getSaved() {
+$.getJSON("/tutorial", function (data) {
+  var savedTutorials = data.filter(obj => {
+    return obj.isSaved === true;
+  })
+  console.log('saved:', savedTutorials)
+  for (var i = 0; i < savedTutorials.length; i++) {
+
+    $("#saved").append(`
+    <p data-id="${savedTutorials[i]._id}"><h4><strong><a href="${savedTutorials[i].link}" target="_blank">${savedTutorials[i].link}</a></strong></h4>
+    <h5>${savedTutorials[i].desc}</h5>
+    <button data-id="${savedTutorials[i]._id}" data-isSaved=${data[i].isSaved} class="btn btn-danger unsave">Delete Tutorial</button></p>
+    <button data-id="${savedTutorials[i]._id}" class="btn btn-success viewNotes">View Notes</button>
+    <button data-id="${savedTutorials[i]._id}" class="btn btn-success addNote">Add Note</button></p>
+    <div id="note-${savedTutorials[i]._id}"></div>
+    <div id="add-note-${savedTutorials[i]._id}"></div>
+    <br>
+    `);
+  }
+});
+
+//Get tutorials on page load
+
+/*function getNotes() {
+  $.getJSON("/note", function (data) {
+    console.log(data)
+
+    for (var i = 0; i < data.length; i++) {
+
+      $("#notes").append(`
+    <p data-id="${data[i]._id}"><h4><strong><a href="${data[i].noteTitle}" target="_blank">${data[i].noteTitle}</a></strong></h4>
+    <button data-id="${data[i]._id}"class="btn btn-danger save">Save Tutorial</button></p>
+    <div id="${data[i]._id}"></div>
+    <br>
+    `);
+    }
+  });
 }
+getNotes();*/
 
 //==============
 //View notes for a specific tutorial.
@@ -24,11 +65,11 @@ $(document).on("click", ".viewNotes", function () {
   //Get tutorial and note data to match to one another.
   $.ajax({
       method: "GET",
-      url: "/notes"
+      url: "/note"
   }).then(function (initial) {
       $.ajax({
           method: "GET",
-          url: "/tutorials/" + thisId
+          url: "/tutorial/" + thisId
       }).then(function (data) {
           //Match notes to tutorials by title, then display the filtered result.
           const result = initial.filter(title => title.noteTitle === data.title);
@@ -82,7 +123,7 @@ $(document).on("click", ".deleteNote", function () {
   var thisId = $(this).attr("data-id");
   $.ajax({
       method: "DELETE",
-      url: "/notes/" + thisId
+      url: "/note/" + thisId
   })
       .then(function (data) {
           console.log(data);
@@ -90,12 +131,25 @@ $(document).on("click", ".deleteNote", function () {
       });
 })
 
+//Clearing out DB items manually...
+/*$(document).on("click", ".clearold", function () {
+  //var thisId = $(this).attr("data-id");
+  $.ajax({
+      method: "DELETE",
+      url: "/tutorial/5c3e97130ac4e119903ad06d"
+  })
+      .then(function (data) {
+          console.log(data);
+          $('.card-' + "5c3e97130ac4e119903ad06d").empty();
+      });
+})*/
+
 //Save tutorial to "Saved Tutorials" page.
 $(document).on("click", ".save", function () {
   var thisId = $(this).attr("data-id");
   $.ajax({
       method: "PUT",
-      url: "/tutorials/" + thisId
+      url: "/tutorial/" + thisId
   })
       .then(function (data) {
           console.log(data);
@@ -110,7 +164,7 @@ $(document).on("click", ".unsave", function () {
   var thisId = $(this).attr("data-id");
   $.ajax({
       method: "DELETE",
-      url: "/tutorials/" + thisId
+      url: "/tutorial/" + thisId
   })
       .then(function (data) {
           console.log(data);
@@ -124,7 +178,7 @@ $(document).on("click", ".addNote", function () {
   var thisId = $(this).attr("data-id");
   $.ajax({
       method: "GET",
-      url: "/tutorials/" + thisId
+      url: "/tutorial/" + thisId
   })
       .then(function (data) {
           console.log(data);
@@ -147,7 +201,7 @@ $(document).on("click", "#savenote", function () {
   // Take user inputs and post.
   $.ajax({
       method: "POST",
-      url: "/tutorials/" + thisId,
+      url: "/tutorial/" + thisId,
       data: {
           noteTitle: $(this).attr('data-title'),
           title: $("#titleinput").val(),
@@ -167,12 +221,12 @@ $(document).on("click", "#savenote", function () {
 });
 
 $(document).on("click", ".scrape", function () {
-  console.log('scrape clicked')
+  console.log('find tutorials clicked')
   $.ajax({
       method: "GET",
-      url: "/tutorials"
+      url: "/tutorial"
   }).then(function () {
-      console.log("scrape complete");
-      location.reload();
+      console.log("find tutorials complete");
+      //location.reload();
   });
 });

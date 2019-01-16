@@ -2,12 +2,6 @@ var express = require("express");
 var logger = require("morgan");
 var mongoose = require("mongoose");
 
-// Our scraping tools
-// Axios is a promised-based http library, similar to jQuery's Ajax method
-// It works on the client and on the server
-var axios = require("axios");
-var cheerio = require("cheerio");
-
 // Require all models
 var db = require("./models");
 
@@ -31,22 +25,23 @@ app.use(express.static("public"));
 // Connect to the Mongo DB
 mongoose.connect("mongodb://localhost/mongotest", { useNewUrlParser: true });
 
-// Main route (simple Hello World Message)
-/*app.get("/", function (req, res) {
-  res.send("Hello world");
-});
-*/
-app.get("/saved", function (req, res) {
-  res.send("Hello world");
-});
+//Load unsaved tutorials
+/*db.Tutorial.create({ link: "https://www.codecademy.com/learn/learn-html" })
+  .then(function(dbTutorial) {
+    // If saved successfully, print the new Library document to the console
+    console.log(dbTutorial);
+  })
+  .catch(function(err) {
+    // If an error occurs, print it to the console
+    console.log(err.message);
+  });*/
 
 // Retrieve data from the db
 /*============================
-NOT CURRENTLY WORKING; Cannot read property 'find' of undefined
 ============================*/
 
 //Find all tutorials
-app.get("/tutorials", function (req, res) {
+app.get("/tutorial", function (req, res) {
   // Grab every document in the Tutorials collection
   db.Tutorial.find({})
     .then(function (dbTutorial) {
@@ -60,7 +55,7 @@ app.get("/tutorials", function (req, res) {
 });
 
 //Route for notes
-app.get("/notes", function (req, res) {
+app.get("/note", function (req, res) {
   // Grab every document in the Tutorials collection
   db.Note.find({})
     .then(function (dbNote) {
@@ -74,7 +69,7 @@ app.get("/notes", function (req, res) {
 });
 
 //Route for notes by ID
-app.get("/notes/:id", function (req, res) {
+app.get("/note/:id", function (req, res) {
   db.Note.findOne({ _id: req.params.id })
   .populate("note")
     .then(function (dbNote) {
@@ -87,7 +82,7 @@ app.get("/notes/:id", function (req, res) {
 });
 
 //Update tutorial status to saved
-app.put("/tutorials/:id", function (req, res) {
+app.put("/tutorial/:id", function (req, res) {
   db.Tutorial.update({ _id: req.params.id }, { $set: { isSaved: true } })
     .then(function (dbTutorial) {
       // If we were able to successfully find saved tutorials, send them back to the client
@@ -103,7 +98,7 @@ app.put("/tutorials/:id", function (req, res) {
 CURRENTLY UNSAVING, BUT NOT BEING RETURNED TO THE INDEX PAGE
 TRIED TOGGLING TRUE/FALSE WHICH DIDN'T WORK
 ========================*/
-app.delete("/tutorials/:id", function (req, res) {
+app.delete("/tutorial/:id", function (req, res) {
   // Using the id passed in the id parameter, prepare a query that updates the matching one in our db...
   db.Tutorial.remove({ _id: req.params.id })
 
@@ -118,7 +113,7 @@ app.delete("/tutorials/:id", function (req, res) {
 });
 
 //Find tutorial by specific ID to add note
-app.get("/tutorials/:id", function (req, res) {
+app.get("/tutorial/:id", function (req, res) {
   db.Tutorial.findOne({ _id: req.params.id })
   .populate("note")
     .then(function (dbTutorial) {
@@ -131,7 +126,7 @@ app.get("/tutorials/:id", function (req, res) {
 });
 
 // Save/update an tutorial's note
-app.post("/tutorials/:id", function(req, res) {
+app.post("/tutorial/:id", function(req, res) {
   // Create a new note and pass the req.body to the entry
   db.Note.create(req.body)
     .then(function(dbNote) {
@@ -149,7 +144,7 @@ app.post("/tutorials/:id", function(req, res) {
     });
 });
 
-app.delete("/notes/:id", function (req, res) {
+app.delete("/note/:id", function (req, res) {
   // Using the id passed in the id parameter, prepare a query that updates the matching one in our db...
   db.Note.remove({ _id: req.params.id })
 
