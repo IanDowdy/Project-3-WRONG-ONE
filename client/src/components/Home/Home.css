@@ -12,10 +12,10 @@ h1 {
     
 }
 #title {
-    /* padding-bottom: 50px; */
+    padding-bottom: 9rem;
     font-family: 'Faster One', cursive;
     letter-spacing: 18px;
-  animation: moveInRight 1s ease-out;
+    animation: moveInRight 1s ease-out;
     
 }
 
