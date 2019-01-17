@@ -1,4 +1,12 @@
 .carousel {
     margin: 5rem;
 }
+button {
+    background-color: rgb(16, 16, 88);
+    border-color: rgb(16, 16, 88);
+    
+}
 
+#bttn {
+    color: white;
+}
