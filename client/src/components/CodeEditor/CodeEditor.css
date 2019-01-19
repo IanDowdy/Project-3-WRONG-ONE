@@ -1,0 +1,9 @@
+.editor-container {
+    height: 25rem;
+    width: 85vw;
+    
+}
+
+ .editor {
+ box-shadow: 0 3px 6px #999, -1em 0 1em #999;
+};
