@@ -1,23 +1,60 @@
 [
     {
-      "src": "assets/images/florian.jpg",
+      "src": "assets/images/Num1.png",
       "altText": "Slide 1",
-      "caption": "Step 1 HTML"
+      "caption": "Step 1"
       
       
     
       
     },
     {
-      "src": "assets/images/javascreen.png",
+      "src": "assets/images/Num2.png",
       "altText": "Slide 2",
-      "caption": "Step 2 CSS"
+      "caption": "Step 2"
       
     },
     {
-      "src": "assets/images/markus.jpg",
+      "src": "assets/images/Num3.png",
       "altText": "Slide 3",
-      "caption": "Step 3 JavaScript"
+      "caption": "Step 3"
+      
+    },
+    {
+      "src": "assets/images/Num4.png",
+      "altText": "Slide 4",
+      "caption": "Step 4"
+      
+    },
+    {
+      "src": "assets/images/Num5.png",
+      "altText": "Slide 5",
+      "caption": "Step 5 JavaScript"
+      
+    },
+    {
+      "src": "assets/images/Num6.png",
+      "altText": "Slide 6",
+      "caption": "Step 6 JavaScript"
+      
+    },
+    {
+      "src": "assets/images/Num7.png",
+      "altText": "Slide 7",
+      "caption": "Step 7 JavaScript"
+      
+    },
+    {
+      "src": "assets/images/Num8a.png",
+      "altText": "Slide 8",
+      "caption": "Step 8 JavaScript"
+      
+    },
+    {
+      "src": "assets/images/Num8b.png",
+      "altText": "Slide 9",
+      "caption": "Step 9 JavaScript"
       
     }
+    
   ]
