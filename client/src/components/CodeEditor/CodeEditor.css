@@ -1,9 +1,15 @@
 .editor-container {
     height: 25rem;
     width: 85vw;
+    background-color: rgba(81, 99, 158, 0.774)!important;
+    
     
 }
 
- .editor {
- box-shadow: 0 3px 6px #999, -1em 0 1em #999;
-};
+
+
+.jumbotron {
+    background-color: #1b078f;
+    background-color: #808080;
+    box-shadow: 0 1rem 1rem rgb(51, 50, 50), -1rem -.7rem 2rem rgb(36, 35, 35);
+}
