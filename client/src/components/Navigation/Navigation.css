@@ -7,11 +7,15 @@
 }
 
  #one {
-     padding-right: 65rem;
+     padding-right: 60rem;
+     padding-left: 2rem;
  }
 
  #two {
     padding-right: 3rem;
+ }
+ #three {
+     margin-left: 2rem;
  }
 
  .navbar {

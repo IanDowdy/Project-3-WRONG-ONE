@@ -36,7 +36,7 @@ class PageJscript extends React.Component {
         return (
             <div className="ui container">
             <SearchBar onFormSubmit={this.onTermSubmit}/>
-            <h1 className="scriptTitle">Javascript Tutorials</h1>
+            <h1 className="scriptTitle"><i className="fas fa-code-branch"></i>Javascript Tutorials</h1>
             <div className="ui grid">
             <div className="ui row">
             <div className="eleven wide column">
