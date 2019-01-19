@@ -8,6 +8,7 @@ const Navigation = () => {
             <nav className="navbar navbar-light" id="blue" style={{ backgroundColor: "#161389" }}>
                 <NavLink className="navItem" to="/">Home</NavLink>
                 <NavLink className="navItem" id="one" to="/about">About</NavLink>
+                <NavLink className="navItem" id="video" to="/jscript">Video Tutorials</NavLink>
                 <NavLink className="navItem" id="two" to="/freecode">Free Code</NavLink>
 
             </nav>

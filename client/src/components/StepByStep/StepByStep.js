@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
 import './StepByStep.css';
 import {
   Carousel,
@@ -56,7 +55,7 @@ class StepByStep extends Component {
           onExited={this.onExited}
           key={item.src}
         >
-          <NavLink id="bttn"  className="ui button" to={item.route}>Start</NavLink>
+          
           <img src={item.src} alt={item.altText} width={600} height={400}/>
           <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
            

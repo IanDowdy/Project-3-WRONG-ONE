@@ -2,22 +2,22 @@
     {
       "src": "assets/images/florian.jpg",
       "altText": "Slide 1",
-      "caption": "Step 1 HTML",
-      "route" : "/html"
+      "caption": "Step 1 HTML"
+      
       
     
       
     },
     {
-      "src": "assets/images/kobu.jpg",
+      "src": "assets/images/javascreen.png",
       "altText": "Slide 2",
-      "caption": "Step 2 CSS",
-      "route" : "/css"
+      "caption": "Step 2 CSS"
+      
     },
     {
       "src": "assets/images/markus.jpg",
       "altText": "Slide 3",
-      "caption": "Step 3 JavaScript",
-      "route" : "/javascript"
+      "caption": "Step 3 JavaScript"
+      
     }
   ]
