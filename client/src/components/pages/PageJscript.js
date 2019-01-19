@@ -3,6 +3,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import youtube from "../apis/youtube";
 import VideoList from "../SearchBar/VideoList";
 import VideoDetail from "../SearchBar/VideoDetail";
+import "./PageJscript.css";
 
 
 
@@ -35,6 +36,7 @@ class PageJscript extends React.Component {
         return (
             <div className="ui container">
             <SearchBar onFormSubmit={this.onTermSubmit}/>
+            <h1 className="scriptTitle">Javascript Tutorials</h1>
             <div className="ui grid">
             <div className="ui row">
             <div className="eleven wide column">
