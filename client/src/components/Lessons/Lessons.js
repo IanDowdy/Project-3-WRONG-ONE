@@ -27,11 +27,11 @@ class Lessons extends Component {
         <DropdownMenu>
           <DropdownItem header>(lesson name)</DropdownItem>
           <DropdownItem>(lesson name 2)</DropdownItem>
-          <DropdownItem disabled>Action (disabled)</DropdownItem>
+          <DropdownItem disabled>(lesson being added/disabled)</DropdownItem>
           <DropdownItem divider />
-          <DropdownItem>Foo Action</DropdownItem>
-          <DropdownItem>Bar Action</DropdownItem>
-          <DropdownItem>Quo Action</DropdownItem>
+          <DropdownItem>etc</DropdownItem>
+          <DropdownItem>etc</DropdownItem>
+          <DropdownItem>whatever else</DropdownItem>
         </DropdownMenu>
       </Dropdown>
     );
