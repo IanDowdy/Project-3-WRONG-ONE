@@ -8,27 +8,34 @@ import Error from './components/Error/Error';
 import Navigation from './components/Navigation/Navigation';
 import './App.css';
 import CodeEditor from './components/CodeEditor/CodeEditor';
+
+import { Provider } from 'react-redux';
+import store from './store';
+
 import PageJscript from './components/pages/PageJscript';
+
 
 
 
 class App extends Component {
   render() {
     return (
+      <Provider store={store}>
       <div>
         <BrowserRouter>
           <div>
             <Navigation />
             <Switch>>
        <Route path="/" component={Home} exact />
-              <Route path="/about" component={About} />
-              <Route path="/freecode" component={CodeEditor} />
-              <Route path="/jscript" component={PageJscript} />
-              <Route path="" component={Error} />
-            </Switch>
-          </div>
-        </BrowserRouter>
-      </div>
+
+       <Route path="/about" component={About} />
+       <Route path="/freecode" component={CodeEditor} />
+       <Route path="" component={Error} />
+     </Switch>
+     </div>
+     </BrowserRouter>
+     </div>
+     </Provider>
     );
   }
 }
