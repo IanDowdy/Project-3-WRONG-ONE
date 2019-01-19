@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
 class Lessons extends Component {
-
   constructor(props) {
     super(props);
 
@@ -13,27 +12,25 @@ class Lessons extends Component {
   }
 
   toggle() {
-    this.setState(prevState => ({
-      dropdownOpen: !prevState.dropdownOpen
-    }));
+    this.setState({
+      dropdownOpen: !this.state.dropdownOpen
+    });
   }
 
   render() {
     return (
-      <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+      <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
         <DropdownToggle caret>
-          Lessons
+          Lessons Dropdown
         </DropdownToggle>
         <DropdownMenu>
-          <DropdownItem header>(lesson name)</DropdownItem>
-          <DropdownItem>(lesson name 2)</DropdownItem>
-          <DropdownItem disabled>(lesson being added/disabled)</DropdownItem>
+          <DropdownItem header>Header</DropdownItem>
+          <DropdownItem disabled>Action</DropdownItem>
+          <DropdownItem>Another Action</DropdownItem>
           <DropdownItem divider />
-          <DropdownItem>etc</DropdownItem>
-          <DropdownItem>etc</DropdownItem>
-          <DropdownItem>whatever else</DropdownItem>
+          <DropdownItem>Another Action</DropdownItem>
         </DropdownMenu>
-      </Dropdown>
+      </ButtonDropdown>
     );
   }
 }
