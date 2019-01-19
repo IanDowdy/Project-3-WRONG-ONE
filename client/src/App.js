@@ -11,23 +11,24 @@ import CodeEditor from './components/CodeEditor/CodeEditor';
 import PageJscript from './components/pages/PageJscript';
 
 
+
 class App extends Component {
   render() {
     return (
       <div>
-      <BrowserRouter>
-   <div>
-     <Navigation />  
-     <Switch>>
+        <BrowserRouter>
+          <div>
+            <Navigation />
+            <Switch>>
        <Route path="/" component={Home} exact />
-       <Route path="/about" component={About} />
-       <Route path="/freecode" component={CodeEditor} />
-       <Route path="/jscript" component={PageJscript} />
-       <Route path="" component={Error} />
-     </Switch>
-     </div>
-     </BrowserRouter>
-     </div>
+              <Route path="/about" component={About} />
+              <Route path="/freecode" component={CodeEditor} />
+              <Route path="/jscript" component={PageJscript} />
+              <Route path="" component={Error} />
+            </Switch>
+          </div>
+        </BrowserRouter>
+      </div>
     );
   }
 }
