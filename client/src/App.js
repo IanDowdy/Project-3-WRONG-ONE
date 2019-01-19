@@ -8,10 +8,13 @@ import Error from './components/Error/Error';
 import Navigation from './components/Navigation/Navigation';
 import './App.css';
 import CodeEditor from './components/CodeEditor/CodeEditor';
+import { Provider } from 'react-redux';
+import store from './store';
 
 class App extends Component {
   render() {
     return (
+      <Provider store={store}>
       <div>
       <BrowserRouter>
    <div>
@@ -25,6 +28,7 @@ class App extends Component {
      </div>
      </BrowserRouter>
      </div>
+     </Provider>
     );
   }
 }
