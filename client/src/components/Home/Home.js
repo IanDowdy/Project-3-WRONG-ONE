@@ -13,10 +13,12 @@ class Home extends Component {
   render() {
     return (
       <div className="App">
-       <h1>App-A-Day! The choice way to ease yourself in to the hectic world of coding!</h1>
-        <AppNavbar />
-        <ShoppingList />
-        <Connection />
+
+      <div className="ui container">
+       <h1>App-A-Day! The choice way to ease yourself in to the</h1>
+         <h2 id="title"><i className="fas fa-code-branch"></i>hectic world of coding!!</h2>
+         </div>
+
         <CodeEditor />
         <StepByStep />
 
