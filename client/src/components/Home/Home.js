@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 
 
 
-import Connection from '../Connection/Connection';
 import CodeEditor from '../CodeEditor/CodeEditor';
 import StepByStep from '../StepByStep/StepByStep';
 import AppNavbar from '../AppNavbar';
 import ShoppingList from '../ShoppingList';
 import './Home.css';
+import Lessons from '../Lessons/Lessons';
 
 class Home extends Component {
   render() {
@@ -19,6 +19,7 @@ class Home extends Component {
         <Connection />
         <CodeEditor />
         <StepByStep />
+
       </div>
     );
   }

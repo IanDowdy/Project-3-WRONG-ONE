@@ -1,4 +1,24 @@
 .carousel {
     margin: 5rem;
 }
+button {
+    background-color: rgb(16, 16, 88);
+    border-color: rgb(16, 16, 88);
+    
+}
 
+#bttn {
+    color: white;
+    background-color: rgb(16, 16, 88);
+    border-color: rgb(16, 16, 88);
+    animation: wiggle 200ms 5s 16 forwards;
+}
+
+@keyframes wiggle {
+    from {
+        transform: rotateZ(-10deg);
+    }
+    to {
+        transform: rotateZ(10deg);
+    }
+}
