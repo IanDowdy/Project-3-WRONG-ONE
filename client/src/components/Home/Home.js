@@ -4,6 +4,7 @@ import Lessons from "../Lessons/Lessons";
 
 import CodeEditor from '../CodeEditor/CodeEditor';
 import StepByStep from '../StepByStep/StepByStep';
+import Header from '../../components/Header/Header';
 
 
 import './Home.css';
@@ -12,6 +13,8 @@ import './Home.css';
 class Home extends Component {
   render() {
     return (
+      <div>
+      <Header />
       <div className="App">
       
       <div className="ui container">
@@ -23,6 +26,7 @@ class Home extends Component {
         <Lessons />
         <StepByStep />
 
+      </div>
       </div>
     );
   }
