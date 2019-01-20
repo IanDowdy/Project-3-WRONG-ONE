@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-
+//186667235953-j2fte15v0l536qg9f09iqsuaiearrt4o.apps.googleusercontent.com
 import Home from './components/Home/Home';
 import About from './components/About/About';
 import Error from './components/Error/Error';
@@ -9,8 +9,7 @@ import Navigation from './components/Navigation/Navigation';
 import './App.css';
 import CodeEditor from './components/CodeEditor/CodeEditor';
 
-import { Provider } from 'react-redux';
-import store from './store';
+
 
 import PageJscript from './components/pages/PageJscript';
 
@@ -20,7 +19,7 @@ import PageJscript from './components/pages/PageJscript';
 class App extends Component {
   render() {
     return (
-      <Provider store={store}>
+      
       <div>
         <BrowserRouter>
           <div>
@@ -30,12 +29,13 @@ class App extends Component {
 
        <Route path="/about" component={About} />
        <Route path="/freecode" component={CodeEditor} />
+       <Route path="/jscript" component={PageJscript}/>
        <Route path="" component={Error} />
      </Switch>
      </div>
      </BrowserRouter>
      </div>
-     </Provider>
+     
     );
   }
 }
