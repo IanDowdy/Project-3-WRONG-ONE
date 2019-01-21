@@ -11,6 +11,7 @@
 .jumbotron {
     /* background-color: #1b078f;
     background-color: #808080; */
+    /* box-shadow: 0 1rem 1rem rgb(51, 50, 50), -1rem -.7rem 2rem rgb(36, 35, 35); */
+    background-color: rgb(51, 49, 49);
     box-shadow: 0 1rem 1rem rgb(51, 50, 50), -1rem -.7rem 2rem rgb(36, 35, 35);
-    background-color: rgb(37, 35, 35);
 }
