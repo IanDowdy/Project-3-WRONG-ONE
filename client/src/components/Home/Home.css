@@ -1,5 +1,6 @@
 h1 {
-    padding-top: 150px;
+    padding-top: 7rem;
+    padding-bottom: 1rem;
     margin-bottom: 50px;
     /* font-family: 'Bungee Outline', cursive; */
     /* font-family: 'Geostar Fill', cursive; */
@@ -8,24 +9,52 @@ h1 {
   animation-name: moveInLeft;
   animation-duration: 1s;
   animation-timing-function: ease-out;
+  
+  /* border: white solid 10px; */
+
+}
 
     
+.dark {
+    color: rgb(41, 40, 40);
 }
 #title {
-    padding-bottom: 9rem;
+    padding-bottom: 4rem;
+    margin-bottom: 5rem;
     font-family: 'Faster One', cursive;
     letter-spacing: 18px;
     animation: moveInRight 1s ease-out;
     
+    /* border: white solid 10px; */
+    
+}
+.first {
+    background: white;
+    opacity: 0.5;
+    border-radius: 40%;
+    box-shadow: 10px 10px 5px rgb(47, 47, 47);
+    
+    
+}
+.fa-code-branch:before {
+    font-size: 40px;
+    color: #161389;
 }
 
+
 * {
-    color: gray;
+    color: rgb(90, 88, 88);
+    
+}
+body {
+    background-image: url("/assets/images/wall24.jpg");
+    background-size: 100%;
 }
 
  .fas {
     animation: flip-icon 2s ease-out forwards;
  }
+ 
 
 @keyframes moveInLeft {
     0% {

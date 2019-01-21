@@ -34,7 +34,7 @@ class PageJscript extends React.Component {
 
     render(){
         return (
-            <div className="ui container">
+            <div className="video ui container">
             <SearchBar onFormSubmit={this.onTermSubmit}/>
             <h1 className="scriptTitle"><i className="fas fa-code-branch"></i>Javascript Tutorials</h1>
             <div className="ui grid">

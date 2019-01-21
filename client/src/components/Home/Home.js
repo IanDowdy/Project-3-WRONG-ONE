@@ -15,19 +15,27 @@ class Home extends Component {
     return (
       <div>
       <Header />
-      <div className="App">
       
-      <div className="ui container">
-       <h1>App-A-Day! The choice way to ease yourself in to the</h1>
-         <h2 id="title"><i className="fas fa-code-branch"></i>hectic world of coding!!</h2>
+      <div className="App">
+      <div className="ui equal width center aligned padded grid">
+      <div className="column">
+      
+      <div className="first">
+       <h1 className="dark">App-A-Day! The choice way to ease yourself in to the</h1>
+         <h2 id="title"><i className="fas fa-code-branch" id="icon"></i>hectic world of coding!!</h2>
          </div>
+        
+         
          
         <CodeEditor />
         <Lessons />
         <StepByStep />
-
+        </div>
+        </div>
       </div>
       </div>
+      
+     
     );
   }
 }
