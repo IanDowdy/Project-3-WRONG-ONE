@@ -12,7 +12,11 @@ h1 {
   
   /* border: white solid 10px; */
 
+}
+
     
+.dark {
+    color: rgb(41, 40, 40);
 }
 #title {
     padding-bottom: 4rem;
@@ -32,6 +36,11 @@ h1 {
     
     
 }
+.fa-code-branch:before {
+    font-size: 40px;
+    color: #161389;
+}
+
 
 * {
     color: rgb(90, 88, 88);

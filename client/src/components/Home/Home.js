@@ -21,8 +21,8 @@ class Home extends Component {
       <div className="column">
       
       <div className="first">
-       <h1>App-A-Day! The choice way to ease yourself in to the</h1>
-         <h2 id="title"><i className="fas fa-code-branch"></i>hectic world of coding!!</h2>
+       <h1 className="dark">App-A-Day! The choice way to ease yourself in to the</h1>
+         <h2 id="title"><i className="fas fa-code-branch" id="icon"></i>hectic world of coding!!</h2>
          </div>
         
          
