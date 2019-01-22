@@ -6,7 +6,7 @@ import CodeEditor from '../CodeEditor/CodeEditor';
 import StepByStep from '../StepByStep/StepByStep';
 
 import Footer from '../Footer/Footer';
-
+import Pics from '../Pics/Pics';
 
 import './Home.css';
 
@@ -26,8 +26,15 @@ class Home extends Component {
          <h2 id="title"><i className="fas fa-code-branch" id="icon"></i>hectic world of coding!!</h2>
          </div>
         
-         
-         
+        <div>
+        
+        <div className="ui equal width center aligned padded grid" id="pics">
+      <div className="column">
+        <Pics />
+        </div>
+        </div>
+
+
         <CodeEditor />
         <Lessons />
         <StepByStep />
@@ -35,6 +42,7 @@ class Home extends Component {
         </div>
       </div>
       <Footer />
+      </div>
       </div>
       
      
