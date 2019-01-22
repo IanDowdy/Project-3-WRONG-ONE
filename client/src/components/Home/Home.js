@@ -4,7 +4,8 @@ import Lessons from "../Lessons/Lessons";
 
 import CodeEditor from '../CodeEditor/CodeEditor';
 import StepByStep from '../StepByStep/StepByStep';
-import Header from '../../components/Header/Header';
+
+import Footer from '../Footer/Footer';
 
 
 import './Home.css';
@@ -14,7 +15,7 @@ class Home extends Component {
   render() {
     return (
       <div>
-      <Header />
+      
       
       <div className="App">
       <div className="ui equal width center aligned padded grid">
@@ -33,6 +34,7 @@ class Home extends Component {
         </div>
         </div>
       </div>
+      <Footer />
       </div>
       
      

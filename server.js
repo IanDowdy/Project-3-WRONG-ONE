@@ -14,8 +14,8 @@ app.get('/api/coders', (req, res) => {
         {id: 1, firstName: "Ian", lastName: "Dowdy"},
         {id: 2, firstName: "Nicole", lastName: "Pike"},
         {id: 3, firstName: "Alexandria", lastName: "Toothman"},
-        {id: 1, firstName: "Patricia", lastName: "Seade"},
-        {id: 1, firstName: "Jennifer", lastName: "Tuten"}
+        {id: 4, firstName: "Patricia", lastName: "Seade"},
+        {id: 5, firstName: "Jennifer", lastName: "Tuten"}
     ];
     
     res.json(coders);

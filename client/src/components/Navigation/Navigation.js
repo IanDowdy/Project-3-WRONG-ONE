@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navigation.css';
+import GoogleAuth from '../../authentication/GoogleAuth';
 
 const Navigation = () => {
     return (
@@ -10,6 +11,8 @@ const Navigation = () => {
                 <NavLink className="navItem" id="one" to="/about">About </NavLink>
                 <NavLink className="navItem" id="video" to="/jscript">Video Tutorials</NavLink>
                 <NavLink className="navItem" id="two" to="/freecode">Free Code</NavLink>
+                <GoogleAuth />
+
 
             </nav>
 
