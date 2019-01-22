@@ -1,14 +1,13 @@
 h1 {
-    padding-top: 7rem;
+    padding-top: 9rem;
     padding-bottom: 1rem;
     margin-bottom: 50px;
-    /* font-family: 'Bungee Outline', cursive; */
-    /* font-family: 'Geostar Fill', cursive; */
     font-family: 'Faster One', cursive;
     /* letter-spacing: 35px; */
   animation-name: moveInLeft;
   animation-duration: 1s;
   animation-timing-function: ease-out;
+  
   
   /* border: white solid 10px; */
 
