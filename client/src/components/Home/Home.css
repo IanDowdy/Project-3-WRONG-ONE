@@ -29,7 +29,7 @@ h1 {
 }
 .first {
     background: white;
-    opacity: 0.5;
+    opacity: 0.7;
     border-radius: 40%;
     box-shadow: 10px 10px 5px rgb(47, 47, 47);
     
@@ -56,8 +56,9 @@ body {
 
  #pics {
      background: white;
-     opacity: .8;
-     box-shadow: 0px 5px 5px rgb(100, 99, 99);
+     opacity: .9;
+     /* box-shadow: 0px 5px 5px rgb(100, 99, 99); */
+     box-shadow: 10px 10px 5px rgb(47, 47, 47);
  }
  
  
