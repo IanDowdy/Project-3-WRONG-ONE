@@ -4,9 +4,11 @@ import CodeEditor from '../CodeEditor/CodeEditor';
 import StepByStep from '../StepByStep/StepByStep';
 import ShoppingList from '../ShoppingList';
 import Footer from '../Footer/Footer';
+
+import Pics from '../Pics/Pics';
 import './Home.css';
 
-
+//FOR THE LOVE OF GOD I HOPE I DIDN'T BREAK ANYTHING
 class Home extends Component {
   render() {
     return (
@@ -30,8 +32,6 @@ class Home extends Component {
         </div>
         <Footer />
       </div>
-
-
     );
   }
 }

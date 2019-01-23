@@ -20,7 +20,11 @@
 
  .navbar {
     box-shadow: 3px 3px rgb(3, 2, 17), -1em 0 .4em rgb(3, 3, 20);
-    box-shadow: inset 5em 1em rgb(17, 22, 100)
+    box-shadow: inset 5em 1em rgb(17, 22, 100);
+    position: fixed;
+    width: 100%;
+    box-shadow: 0px 5px 5px rgb(87, 84, 84);
+    z-index: 10;
  }
 
  #video {
