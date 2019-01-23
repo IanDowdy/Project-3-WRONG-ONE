@@ -24,11 +24,11 @@ class Lessons extends Component {
           Lessons Dropdown
         </DropdownToggle>
         <DropdownMenu>
-          <DropdownItem header>Header</DropdownItem>
-          <DropdownItem disabled>Action</DropdownItem>
-          <DropdownItem>Another Action</DropdownItem>
-          <DropdownItem divider />
-          <DropdownItem>Another Action</DropdownItem>
+          
+          <DropdownItem>HTML</DropdownItem>
+          <DropdownItem>CSS</DropdownItem>
+          <DropdownItem>JavaScript</DropdownItem>
+          
         </DropdownMenu>
       </ButtonDropdown>
     );
