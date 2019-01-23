@@ -7,9 +7,10 @@ import About from './components/About/About';
 import Error from './components/Error/Error';
 import Navigation from './components/Navigation/Navigation';
 import './App.css';
-import CodeEditor from './components/CodeEditor/CodeEditor';
-import { Provider } from 'react-redux';
-import store from './redux/store';
+import FreeCode from './components/FreeCode/FreeCode';
+
+
+
 import PageJscript from './components/pages/PageJscript';
 
 
@@ -18,7 +19,7 @@ import PageJscript from './components/pages/PageJscript';
 class App extends Component {
   render() {
     return (
-      <Provider store={store}>
+      
       <div>
         <BrowserRouter>
           <div>
@@ -27,14 +28,13 @@ class App extends Component {
        <Route path="/" component={Home} exact />
 
        <Route path="/about" component={About} />
-       <Route path="/freecode" component={CodeEditor} />
+       <Route path="/freecode" component={FreeCode} />
        <Route path="/jscript" component={PageJscript}/>
        <Route path="" component={Error} />
      </Switch>
      </div>
      </BrowserRouter>
      </div>
-     </Provider>
      
     );
   }

@@ -1,14 +1,15 @@
 .navItem {
     padding: 5px;
     color: white;
-    box-shadow: 3px 3px gray, -1em 0 .4em gray;
+    
     
     
 }
 
  #one {
-     padding-right: 40rem;
+     padding-right: 30rem;
      padding-left: 2rem;
+     
  }
 
  #two {
@@ -23,7 +24,7 @@
     box-shadow: inset 5em 1em rgb(17, 22, 100);
     position: fixed;
     width: 100%;
-    box-shadow: 0px 5px 5px rgb(87, 84, 84);
+    box-shadow: 0px 5px 5px rgb(51, 49, 49);
     z-index: 10;
  }
 
