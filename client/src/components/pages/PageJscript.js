@@ -32,6 +32,11 @@ class PageJscript extends React.Component {
         this.setState({ selectedVideo: video })
     };
 
+    //save videos to User's profile page
+    onSaveClick = () => {
+        this.saveVideo();
+    };
+
     render(){
         return (
             <div className="video ui container">

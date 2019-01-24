@@ -8,36 +8,32 @@ import Error from './components/Error/Error';
 import Navigation from './components/Navigation/Navigation';
 import './App.css';
 import FreeCode from './components/FreeCode/FreeCode';
-
-
-
 import PageJscript from './components/pages/PageJscript';
-
-
+import Login from './components/Login/Login';
+import Learn from './components/Learn/Learn';
 
 
 class App extends Component {
   render() {
     return (
-      
       <div>
         <BrowserRouter>
           <div>
             <Navigation />
-            <Switch>>
+            <Switch>
        <Route path="/" component={Home} exact />
-
        <Route path="/about" component={About} />
        <Route path="/freecode" component={FreeCode} />
+       <Route path="/learn" component={Learn}/>
+       <Route path="/login" component={Login}/>
        <Route path="/jscript" component={PageJscript}/>
        <Route path="" component={Error} />
      </Switch>
      </div>
      </BrowserRouter>
      </div>
-     
     );
+
   }
 }
-
 export default App;
