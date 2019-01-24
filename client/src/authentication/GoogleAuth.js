@@ -29,7 +29,15 @@ onSignInClick = () => {
 
 onSignOutClick = () => {
     this.auth.signOut();
+    window.location="/"
 }
+
+viewLessons = () => {
+    window.location="learn"
+};
+viewLogin = () => {
+    window.location="login"
+};
 
     renderAuthButton() {
         if(this.props.isSignedIn === null) {
@@ -44,9 +52,26 @@ onSignOutClick = () => {
         } else {
             return (
                 <button onClick={this.onSignInClick} className="ui red google button">
-
                 <i className="google icon" />
                 Sign In with Google
+                </button>
+            );
+        }
+    }
+
+    renderTutorials() {
+        if(this.props.isSignedIn === null) {
+            return null;
+        } else if (this.props.isSignedIn) {
+            return (
+                <button onClick={this.viewLessons} className="ui green google button">
+                Tutorials
+                </button>
+            );
+        } else {
+            return (
+                <button onClick={this.viewLogin} className="ui green google button">
+                Sign In to View More Lessons
                 </button>
             
             );
@@ -54,12 +79,12 @@ onSignOutClick = () => {
     }
     render() {
         return (
-            <div>{this.renderAuthButton()}>
+            <div>{this.renderAuthButton()}
+            {this.renderTutorials()}
             </div>
         );
     }
 };
-
 
 const mapStateToProps = (state) => {
     return { isSignedIn: state.auth.isSignedIn };
