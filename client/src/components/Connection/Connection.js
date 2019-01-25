@@ -17,7 +17,7 @@ class Coders extends Component {
 
   render() {
     return (
-      <div className="">
+      <div>
        <h2>Coders</h2>
        <ul>
          {this.state.coders.map(coder =>
