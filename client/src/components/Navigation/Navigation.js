@@ -11,6 +11,7 @@ const Navigation = () => {
                 <NavLink className="navItem" id="one" to="/about">About </NavLink>
                 <NavLink className="navItem" id="video" to="/jscript">Video Tutorials</NavLink>
                 <NavLink className="navItem" id="learn" to="/learn">Learn</NavLink>
+                <NavLink className="navItem" id="resources" to="/resources">Additional Resources</NavLink>
                 <NavLink className="navItem" id="two" to="/freecode">Free Code</NavLink>
                 <GoogleAuth />
 

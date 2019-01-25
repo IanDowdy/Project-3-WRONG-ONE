@@ -11,6 +11,7 @@ import FreeCode from './components/FreeCode/FreeCode';
 import PageJscript from './components/pages/PageJscript';
 import Login from './components/Login/Login';
 import Learn from './components/Learn/Learn';
+import Resources from './components/Resources/Resources';
 
 
 class App extends Component {
@@ -27,6 +28,7 @@ class App extends Component {
        <Route path="/learn" component={Learn}/>
        <Route path="/login" component={Login}/>
        <Route path="/jscript" component={PageJscript}/>
+       <Route path="/resources" component={Resources}/>
        <Route path="" component={Error} />
      </Switch>
      </div>
