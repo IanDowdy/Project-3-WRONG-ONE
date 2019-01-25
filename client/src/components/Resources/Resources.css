@@ -16,3 +16,9 @@
   width: 70%;
   margin: 0 auto;
 }
+.responses {
+  clear: both;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 20px;
+}

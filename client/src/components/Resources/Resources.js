@@ -31,6 +31,11 @@ class Resources extends Component {
       [name]: value
     });
   };
+    // handleIncrement increases this.state.count by 1
+    handleLikes = () => {
+      // We always use the setState method to update a component's state
+      this.setState({ likes: this.state.likes + 1 });
+    };
 
   handleFormSubmit = event => {
     event.preventDefault();
@@ -44,12 +49,16 @@ class Resources extends Component {
     }
   };
 //ToDo if there's time: add a thumbs-up icon and display # of likes
+/**
+<button onclick={this.handleLikes}>Like</button>
+{comment.likes}      
+ */
   render() {
     return (
 <div className="box">
 <div className="header">
-<h3>We'd love to hear from you!</h3>
-<h5>Do you have any resources that have helped you, or suggestions for new tutorials?</h5>
+<h2>We'd love to hear from you!</h2>
+<h5>Do you have any resources that have helped you? Any suggestions for new tutorials?</h5>
 <h5>Please feel free to share below!</h5>
 </div>
 <div className="feedback">
@@ -65,6 +74,7 @@ class Resources extends Component {
               <FormBtn onClick={this.handleFormSubmit}>Submit Comment</FormBtn>
             </form>
 </div>
+<div class="responses">
             {this.state.comments.length ? (
               <List>
                 {this.state.comments.map(comment => (
@@ -72,15 +82,17 @@ class Resources extends Component {
                       <h4>
                         {comment.title} says:
                       </h4>
-                      <h5>
+                      <p>
                         {comment.synopsis}
-                        </h5>                    
+                        </p> 
+     
                   </ListItem>
                 ))}
               </List>
             ) : (
               <h3>No Results to Display</h3>
             )}
+            </div>
 </div>
     );
   }
