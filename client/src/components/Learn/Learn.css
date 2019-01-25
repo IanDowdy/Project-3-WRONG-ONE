@@ -12,3 +12,20 @@ a {
   text-decoration: none !important;
   text-align: center;
 }
+.editor {
+  padding-top: 7rem;
+  margin: 0 auto;
+}
+.card-header {
+  text-align: center;
+}
+.accordion,
+.codebox {
+  padding: 5px;
+  width: 90%;
+  margin: 0 auto;
+}
+.commented {
+  color: green;
+  font-style: italic;
+}

@@ -1,21 +1,52 @@
 import React, { Component } from 'react';
-import Footer from '../Footer/Footer';
 import './Learn.css';
 
 class Learn extends Component {
   render() {
-    return (
-      <div>
-      <div className="learn">
-        <h1> HTML</h1>
-        <a href="https://learn.freecodecamp.org/responsive-web-design/basic-html-and-html5/create-a-form-element/">Create a form element</a>
-        <h1> CSS</h1>
-      <a href="https://learn.freecodecamp.org/responsive-web-design/basic-css/style-multiple-elements-with-a-css-class">Style multiple elements with a CSS class</a>
-      <h1> JavaScript</h1>
-      <a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/store-multiple-values-in-one-variable-using-javascript-arrays">Store multiple values in one variable using JavaScript arrays</a>
-      <Footer />
+    return (<div>
+      <div class="editor">
+         
+       <iframe className="editor-container" src="https://stackblitz.com/edit/js-qkcdf5?embed=1&file=index.js" view="Editor" title="code editor"></iframe>
+         
       </div>
-      </div>
+          <div class="accordion" id="accordionExample">
+
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Solution
+                </button>
+              </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+              <div class="card-body">
+                <p>incrementedNumber++ <span class="commented">//expected output: 2</span></p>
+                <p><strong>You can also decrement a number using the -- operator:</strong></p>
+                <p>let decrementedNumber = 4</p>
+                <p>decrementedNumber-- <span class="commented">//expected output: 3</span></p>
+                
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Comments
+                </button>
+              </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+              <div class="card-body">
+                Add your feedback! Too easy? Too difficult?
+                
+                <div class="userComments"><button type="button" class="btn btn-success">Add a Comment</button></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
     );
   }
 }
