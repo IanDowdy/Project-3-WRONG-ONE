@@ -12,6 +12,7 @@ class Exercises extends Component {
   render() {
     return (
       <div className="exercises">
+      
       {this.state.exercises.map(exercise => (
 <TutorialCard
             id={exercise.id}
