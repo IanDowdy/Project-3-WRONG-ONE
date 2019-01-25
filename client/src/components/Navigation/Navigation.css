@@ -35,6 +35,16 @@
      animation: flip-icon 2s ease-out forwards;
  }
 
+ /* .navItem {
+     opacity: 0;
+     animation-name: btn;
+     animation-duration: 3s;
+     animation-delay: 1s;
+     animation-fill-mode: forwards;
+ } */
+
+ 
+
  @keyframes wiggle {
      0%{
          transform: rotateZ(0deg);
@@ -58,3 +68,10 @@
          transform: rotateY(360deg);
      }
  }
+
+ /* @keyframes btn {
+     0% {opacity:0}
+     100% {opacity:1}
+ } */
+
+ 
