@@ -1,11 +1,12 @@
 .learn {
   background-color: white;
-  /*padding-top: 5rem;*/
+  padding-top: 5rem;
   height: 100%;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 }
-h1 {
+h1,
+h3 {
   text-align: center;
 }
 a {
