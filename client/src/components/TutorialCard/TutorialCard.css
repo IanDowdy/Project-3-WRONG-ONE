@@ -4,6 +4,9 @@
 .editor-container {
   margin: 0 auto;
 }
-.wrapper {
+iframe {
   margin: 0 auto;
+}
+h3 {
+  padding-top: 2rem;
 }

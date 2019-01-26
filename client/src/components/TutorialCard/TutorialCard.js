@@ -16,6 +16,7 @@ this.setState({showAnswer: !this.state.showAnswer})
     }
     return (
       <div>
+        
           <h3>{this.props.title}</h3>
           <div class="wrapper">
     <iframe className="editor-container" id="editor" src={this.props.link} view="Editor" title="code editor"></iframe></div>

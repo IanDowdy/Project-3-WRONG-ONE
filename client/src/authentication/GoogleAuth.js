@@ -69,12 +69,7 @@ viewLogin = () => {
                 </button>
             );
         } else {
-            return (
-                <button onClick={this.viewLogin} className="ui green google button">
-                Sign In to View More Lessons
-                </button>
-            
-            );
+            return null
         }
     }
     render() {
