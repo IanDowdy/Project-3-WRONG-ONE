@@ -30,7 +30,7 @@ app.get('/api/coders', (req, res) => {
 app.use(routes);
 
 if (process.env.NODE_ENV === 'production') {
-    app.use(express.static('client/build'));
+    app.use(app.use(express.static(path.join(__dirname, '/build')));
 }
 
 const port = process.env.PORT || 5000;
