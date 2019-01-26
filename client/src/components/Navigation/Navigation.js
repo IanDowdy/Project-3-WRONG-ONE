@@ -13,6 +13,7 @@ const Navigation = () => {
 
                 <NavLink className="navItem" id="resources" to="/resources">Additional Resources</NavLink>
                 <NavLink className="navItem" id="two" to="/freecode">Free Code</NavLink>
+                
                 <GoogleAuth />
 
 
@@ -24,3 +25,16 @@ const Navigation = () => {
 };
 
 export default Navigation;
+
+/**
+ <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Categories
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="/html">HTML</a>
+    <a class="dropdown-item" href="/css">CSS</a>
+    <a class="dropdown-item" href="/js">JavaScript</a>
+  </div>
+</div>
+ */

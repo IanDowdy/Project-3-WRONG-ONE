@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-
+import { connect } from 'react-redux';
 //186667235953-j2fte15v0l536qg9f09iqsuaiearrt4o.apps.googleusercontent.com
 import Home from './components/Home/Home';
 import About from './components/About/About';
@@ -12,8 +12,7 @@ import PageJscript from './components/pages/PageJscript';
 import Login from './components/Login/Login';
 import Learn from './components/Learn/Learn';
 import Resources from './components/Resources/Resources';
-
-
+ 
 class App extends Component {
   render() {
     return (
@@ -21,7 +20,7 @@ class App extends Component {
         <BrowserRouter>
           <div>
             <Navigation />
-            <Switch>
+            <Switch> 
        <Route path="/" component={Home} exact />
        <Route path="/about" component={About} />
        <Route path="/freecode" component={FreeCode} />
@@ -35,7 +34,13 @@ class App extends Component {
      </BrowserRouter>
      </div>
     );
-
   }
 }
-export default App;
+
+const mapStateToProps = (state) => {
+  return { isSignedIn: state.auth.isSignedIn };
+};
+
+export default connect(
+  mapStateToProps,
+   { }) (App);

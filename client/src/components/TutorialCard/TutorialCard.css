@@ -1,6 +1,9 @@
 .card-header {
   text-align: center;
 }
-#editor {
+.editor-container {
+  margin: 0 auto;
+}
+.wrapper {
   margin: 0 auto;
 }
