@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import TutorialCard from '../TutorialCard/TutorialCard'
 import exercises from "../../tutorials.json";
+//import { Jumbotron } from 'reactstrap';
+import './Exercises.css';
 
 class Exercises extends Component {
   // Setting this.state.exercises to the tutorials json array
@@ -12,7 +14,8 @@ class Exercises extends Component {
   render() {
     return (
       <div className="exercises">
-      
+      <h1>Exercises</h1>
+
       {this.state.exercises.map(exercise => (
 <TutorialCard
             id={exercise.id}
@@ -22,6 +25,7 @@ class Exercises extends Component {
             solution={exercise.solution}
           />
         ))}
+
         </div>
     );
   }
