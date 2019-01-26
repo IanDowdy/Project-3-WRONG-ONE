@@ -10,7 +10,6 @@ class CodeEditor extends Component {
        <iframe className="editor-container" src="https://stackblitz.com/edit/js-quhffp?embed=1&file=index.js" view="Editor" title="code editor"></iframe>
          </Jumbotron>
       </div>
-      
     );
   }
 }
