@@ -13,7 +13,7 @@ import Login from './components/Login/Login';
 import Learn from './components/Learn/Learn';
 import Resources from './components/Resources/Resources';
 
-class App extends React.Component {
+class App extends Component {
 
   render() {
     console.log('Logged In? ',this.props.isSignedIn)
