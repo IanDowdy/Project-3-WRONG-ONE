@@ -7,7 +7,7 @@ const Pics = (props) => {
      <Row>
        <Col>
       <Card>
-        <CardImg top width="100%" src="../assets/images/pics1.jpg" alt="Card image cap" />
+        <CardImg  width="100%" src="../assets/images/pics1.jpg" alt="Card image cap" />
         
       </Card>
       </Col>
