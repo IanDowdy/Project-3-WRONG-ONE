@@ -3,15 +3,18 @@ import React, { Component } from "react";
 import API from '../../utils/API';
 //import DeleteBtn from "../components/DeleteBtn";
 //import { Col, Row, Container } from "../components/Grid";
-import { List, ListItem } from "../List/List";
+
 import { Input, TextArea, FormBtn } from "../Form/Form";
+import faker from "faker";
+
 import './Resources.css'
 
 class Resources extends Component {
   state = {
     comments: [],
     title: "",
-    synopsis: ""
+    synopsis: "",
+    date: ""
   };
 
   componentDidMount() {
@@ -48,6 +51,13 @@ class Resources extends Component {
         .catch(err => console.log(err));
     }
   };
+  
+  
+  
+  
+  
+    
+  
 //ToDo if there's time: add a thumbs-up icon and display # of likes
 /**
 <button onclick={this.handleLikes}>Like</button>
@@ -55,6 +65,7 @@ class Resources extends Component {
  */
   render() {
     return (
+      
 <div className="box">
 <div className="header">
 <h2>We'd love to hear from you!</h2>
@@ -74,26 +85,49 @@ class Resources extends Component {
               <FormBtn onClick={this.handleFormSubmit}>Submit Comment</FormBtn>
             </form>
 </div>
-<div class="responses">
+
+<div class="ui two column centered grid">
+  <div class="column">
+
+
+
             {this.state.comments.length ? (
-              <List>
+              <div className="comment">
+              
+
                 {this.state.comments.map(comment => (
-                  <ListItem key={comment._id}>
-                      <h4>
-                        {comment.title} says:
-                      </h4>
-                      <p>
+                  <div className="ui container comments">
+                  <div className="comment">
+                  <a key={comment._id} href="/" className="avatar">
+              <img alt="avatar" src={faker.image.avatar()} />
+              </a>
+                    <div className="content">
+                      <div className="author">
+                        {comment.title} 
+                      
+                      <div className="metadata">
+                      <span className="date">{comment.date}</span>
+                        </div>
+                        </div>
+                    
+                      <div className="text">
                         {comment.synopsis}
-                        </p> 
-     
-                  </ListItem>
+                        </div> 
+                        </div>
+                        </div>
+                        </div>
+                        
                 ))}
-              </List>
+              </div>
             ) : (
               <h3>No Results to Display</h3>
             )}
             </div>
+            
+
 </div>
+</div>
+
     );
   }
 }
