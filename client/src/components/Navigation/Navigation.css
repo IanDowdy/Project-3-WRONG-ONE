@@ -35,7 +35,7 @@
      animation: flip-icon 2s ease-out forwards;
  }
 
- #one, #two, #three, #learn  {
+ #one, #two, #three, #learn, #resources  {
      opacity: 0;
      animation-name: btn;
      animation-duration: 3s;
