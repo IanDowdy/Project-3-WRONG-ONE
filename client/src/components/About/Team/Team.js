@@ -7,41 +7,38 @@ const Team = (props) => {
     return (
 
         <Container>
-            <Row-1>
-
+            <Row>
                 <Col>
-
+                    <h2 id="theTeam"> The Team </h2>
                 </Col>
 
-            </Row-1>
-            <Row-2>
 
                 <Col>
-
+                    <img className="ui avatar image" alt="" src="../../assets/images/ian.jpg" style={{ width: 100, height: 100 }} />
+                    <p>Ian Dowdy</p>
                 </Col>
-
-            </Row-2>
-            <Row-3>
 
                 <Col>
-
+                    <img className="ui avatar image" alt="" src="../../assets/images/jennifer.jpg" style={{ width: 100, height: 100 }} />
+                    <p>Jennifer Tuten</p>
                 </Col>
-
-            </Row-3>
-            <Row-4>
 
                 <Col>
-
+                    <img className="ui avatar image" alt="" src="../../assets/images/nicole.jpg" style={{ width: 100, height: 100 }} />
+                    <p>Nicole Pike</p>
                 </Col>
-
-            </Row-4>
-            <Row-5>
 
                 <Col>
-
+                    <img className="ui avatar image" alt="" src="../../assets/images/pat.jpg" style={{ width: 100, height: 100 }} />
+                    <p>Patricia Seade</p>
                 </Col>
 
-            </Row-5>
+                <Col>
+                    <img className="ui avatar image" alt="" src="../../assets/images/alex.jpg" style={{ width: 100, height: 100 }} />
+                    <p>Alex Toothman</p>
+                </Col>
+
+            </Row>
 
 
 

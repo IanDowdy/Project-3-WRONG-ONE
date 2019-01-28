@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Team from "./Team/Team";
 import AboutUS from "./AboutUS/AboutUS";
 import Contact from "./Contact/Contact";
+// import Connection from "../Connection/Connection";
 
 import './About.css';
 
@@ -28,6 +29,7 @@ class About extends Component {
         <div className="aboutTeam ui container">
           <Team />
 
+          {/* <Connection /> */}
 
         </div>
 
