@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./DeleteBtn.css"
 const DeleteBtn = (props) => {
 
 // The ...props means, spread all of the passed props onto this element
