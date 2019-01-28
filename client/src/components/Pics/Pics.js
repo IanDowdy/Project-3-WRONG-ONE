@@ -15,8 +15,8 @@ const Pics = (props) => {
      
       <Col sm="6">
         <Card body>
-          <CardTitle style={{fontSize: "35px"}}>How this app works</CardTitle>
-          <CardText style={{fontSize: "25px"}}>With supporting text below as a natural lead-in to additional content.</CardText>        
+          <CardTitle style={{fontSize: "35px", paddingTop: "50px"}}>How this app works</CardTitle>
+          <CardText style={{fontSize: "25px"}}>Scroll down to start coding with our app code editor, beginning with Lesson 1. Sign in to access additional resources, such as video tutorials, and advice from other friendly coders.</CardText>        
         </Card>
       </Col>
       </Row>
