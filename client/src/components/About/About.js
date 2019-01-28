@@ -35,25 +35,7 @@ class About extends Component {
 
         <div className="aboutContact ui container">
           <Contact />
-
-
         </div>
-
-
-
-
-
-        {/* <div className="connection">
-           
-          </div> */}
-
-
-
-
-
-
-
-
 
       </div >
 

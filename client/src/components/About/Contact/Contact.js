@@ -9,7 +9,7 @@ const Contact = (props) => {
         <Row>
             <Col>
                 <Card>
-                    <CardImg top width="100%" src="../assets/images/team.jpg" alt="Card image cap" />
+                    <CardImg top width="100%" src="../assets/images/team-2.jpg" alt="Card image cap" />
 
                 </Card>
             </Col>
