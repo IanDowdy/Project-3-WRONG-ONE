@@ -7,7 +7,10 @@ import API from '../../utils/API';
 import { Input, TextArea, FormBtn } from "../Form/Form";
 import faker from "faker";
 
+
 import './Resources.css'
+import DeleteBtn from "../DeleteBtn/DeleteBtn";
+
 
 class Resources extends Component {
   state = {
@@ -25,6 +28,11 @@ class Resources extends Component {
   loadComments = () => {
     API.getComments()
       .then(res => this.setState({ comments: res.data, title: "", synopsis: "" }))
+      .catch(err => console.log(err));
+  };
+  deleteComment = id => {
+    API.deleteComment(id)
+      .then(res => this.loadComments())
       .catch(err => console.log(err));
   };
 
@@ -102,6 +110,7 @@ class Resources extends Component {
               <img alt="avatar" src={faker.image.avatar()} />
               </a>
                     <div className="content">
+
                       <div className="author">
                         {comment.title} 
                       
@@ -112,11 +121,13 @@ class Resources extends Component {
                     
                       <div className="text">
                         {comment.synopsis}
-                        </div> 
-                        </div>
-                        </div>
-                        </div>
                         
+                        </div> 
+                        <DeleteBtn onClick={() => this.deleteComment(comment._id)} />
+                        </div>
+                        </div>
+                        </div>
+                       
                 ))}
               </div>
             ) : (
