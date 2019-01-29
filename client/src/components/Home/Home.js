@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Lessons from "../Lessons/Lessons";
+//import Lessons from "../Lessons/Lessons";
 
 import CodeEditor from '../CodeEditor/CodeEditor';
 import StepByStep from '../StepByStep/StepByStep';
@@ -35,9 +35,10 @@ class Home extends Component {
         </div>
 
 
-        <CodeEditor />
-        <Lessons />
+        
+        
         <StepByStep />
+        <CodeEditor />
         </div>
         </div>
       </div>

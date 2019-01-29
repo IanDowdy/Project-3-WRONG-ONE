@@ -1,29 +1,44 @@
 import React, { Component } from 'react';
-import Connection from "../Connection/Connection";
-
+import Team from "./Team/Team";
+import AboutUS from "./AboutUS/AboutUS";
+import Contact from "./Contact/Contact";
+// import Connection from "../Connection/Connection";
 
 import './About.css';
 
 class About extends Component {
   render() {
     return (
-      <div>
-      <div className="about ui container">
-       <h1>Who we are, what we're about, what this app is and</h1>
-         <h2 id="title">what we hope to accomplish with it.</h2>
-         <div className="ui relaxed divided list">
-         <div className= "item">
-         <img className="ui avatar image" alt=""src="../../assets/images/kobu.jpg" />
-          <div className="content">
-          <div className="header">
-         <Connection />
-         </div>
-         </div>
-         </div>
-         </div>
-      </div>
-      </div>
-      
+      <div className="container">
+
+
+        <div className="aboutChange ui container">
+          <h1>A Little About App-A-Day!</h1>
+
+          <AboutUS />
+
+          <div className="item">
+            <div className="content">
+              <div className="header">
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div className="aboutTeam ui container">
+          <Team />
+
+          {/* <Connection /> */}
+
+        </div>
+
+        <div className="aboutContact ui container">
+          <Contact />
+        </div>
+
+      </div >
+
     );
   }
 }
