@@ -9,7 +9,8 @@ The app can be accessed here.
 
 To gain access to all of our website, we use a quick 2 click login process, accessed at the top right of our app:
 
-[INSERT PIC 1]
+![SignIn](/readme/signin1.png)
+
 
 From there you are now allowed to check out our recommended list of video tutorials, engage in new lessons, and provide feedback to help us better our site. Just click any of the links at the top of the navigation bar and you’re ready to roll!
 
