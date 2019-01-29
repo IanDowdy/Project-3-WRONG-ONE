@@ -5,7 +5,7 @@ import API from '../../utils/API';
 //import { Col, Row, Container } from "../components/Grid";
 
 import { Input, TextArea, FormBtn } from "../Form/Form";
-import faker from "faker";
+//import faker from "faker";
 
 
 import './Resources.css'
@@ -76,7 +76,7 @@ class Resources extends Component {
 
       <div className="box">
         <div className="header">
-          <h2>We'd love to hear from you!</h2>
+          <h1>We'd love to hear from you!</h1>
           <h5>Do you have any resources that have helped you? Any suggestions for new tutorials?</h5>
           <h5>Please feel free to share below!</h5>
         </div>
@@ -107,7 +107,7 @@ class Resources extends Component {
                   <div className="ui container comments">
                     <div className="comment">
                       <a key={comment._id} href="/" className="avatar">
-                        <img alt="avatar" src={faker.image.avatar()} />
+                        {/* <img alt="avatar" src={faker.image.avatar()} /> */}
                       </a>
                       <div className="content">
 
@@ -123,7 +123,7 @@ class Resources extends Component {
                           {comment.synopsis}
 
                         </div>
-                        <DeleteBtn onClick={() => this.deleteComment(comment._id)} />
+                        
                       </div>
                     </div>
                   </div>
