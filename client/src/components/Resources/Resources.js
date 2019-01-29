@@ -8,7 +8,7 @@ import { Input, TextArea, FormBtn } from "../Form/Form";
 import faker from "faker";
 
 import "./Resources.css";
-import DeleteBtn from "../DeleteBtn/DeleteBtn";
+// import DeleteBtn from "../DeleteBtn/DeleteBtn";
 
 class Resources extends Component {
   state = {
@@ -114,9 +114,10 @@ class Resources extends Component {
                         </div>
 
                         <div className="text">{comment.synopsis}</div>
-                        <DeleteBtn
+                        {/* <DeleteBtn
+                          
                           onClick={() => this.deleteComment(comment._id)}
-                        />
+                        /> */}
                       </div>
                     </div>
                   </div>
