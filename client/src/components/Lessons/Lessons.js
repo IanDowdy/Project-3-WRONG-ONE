@@ -29,9 +29,9 @@ class Lessons extends Component {
         </DropdownToggle>
         <DropdownMenu>
           
-          <DropdownItem><NavLink className="lessonDropdown" to="/lesson1">Lesson 1</NavLink></DropdownItem>
-          <DropdownItem>CSS</DropdownItem>
-          <DropdownItem>JavaScript</DropdownItem>
+          <DropdownItem><NavLink className="lessonDropdown" to="/lesson1">Lesson 1: Arrays</NavLink></DropdownItem>
+          <DropdownItem><NavLink className="lessonDropdown" to="/lesson2">Lesson 2: Loops</NavLink></DropdownItem>
+          <DropdownItem><NavLink className="lessonDropdown" to="/lesson3">Lesson 3: Functions</NavLink></DropdownItem>
           
         </DropdownMenu>
       </ButtonDropdown>
