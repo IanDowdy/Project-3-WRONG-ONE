@@ -77,7 +77,7 @@ viewLogin = () => {
         console.log('This is our props: ', this.props)
         return (
             <div>{this.renderAuthButton()}
-            {this.renderTutorials()}
+
             </div>
         );
     }
