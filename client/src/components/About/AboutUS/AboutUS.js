@@ -1,7 +1,6 @@
 import React from 'react';
 import { Card, CardImg, Row, Col, CardText } from 'reactstrap';
 
-import './AboutUS.css';
 
 const AboutUS = (props) => {
     return (
